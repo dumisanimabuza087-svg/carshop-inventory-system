@@ -35,6 +35,9 @@ public class datacenterFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jScrollPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jScrollPane1.setOpaque(false);
+
         carTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -96,7 +99,7 @@ public class datacenterFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    static javax.swing.JTable carTable;
+    private static javax.swing.JTable carTable;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

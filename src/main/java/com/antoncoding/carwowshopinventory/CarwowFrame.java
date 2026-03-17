@@ -52,6 +52,16 @@ public class CarwowFrame extends JPanel {
     DefaultTableModel tableModel;
     datacenterFrame dataCenter = new datacenterFrame();
     
+    public void buttonStyle()
+    {
+        btnAdd.setContentAreaFilled(false);
+        btnAdd.setOpaque(true);
+        btnAdd.setBackground(new Color(52, 152, 219));
+        btnAdd.setForeground(Color.WHITE);
+        btnAdd.setBorder(new javax.swing.border.LineBorder(new Color(52,152,219), 1, true));
+
+    }
+    
     public void connect()
     {
         try{
@@ -173,6 +183,8 @@ public class CarwowFrame extends JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
+        setBackground(new java.awt.Color(255, 255, 255));
+
         jPanel1.setBackground(new java.awt.Color(0, 204, 204));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -195,6 +207,7 @@ public class CarwowFrame extends JPanel {
                 .addGap(18, 18, 18))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -311,16 +324,28 @@ public class CarwowFrame extends JPanel {
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
+        btnAdd.setBackground(new java.awt.Color(0, 204, 204));
         btnAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
+        btnAdd.setBorderPainted(false);
+        btnAdd.setFocusPainted(false);
         btnAdd.addActionListener(this::btnAddActionPerformed);
 
+        btnViewAdd.setBackground(new java.awt.Color(0, 204, 204));
         btnViewAdd.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnViewAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnViewAdd.setText("View addad");
+        btnViewAdd.setBorderPainted(false);
+        btnViewAdd.setFocusPainted(false);
         btnViewAdd.addActionListener(this::btnViewAddActionPerformed);
 
-        btnPrint.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        btnPrint.setBackground(new java.awt.Color(0, 204, 204));
+        btnPrint.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnPrint.setForeground(new java.awt.Color(255, 255, 255));
         btnPrint.setText("Print");
+        btnPrint.setBorderPainted(false);
+        btnPrint.setFocusPainted(false);
         btnPrint.addActionListener(this::btnPrintActionPerformed);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -330,16 +355,18 @@ public class CarwowFrame extends JPanel {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(btnAdd)
-                .addGap(18, 18, 18)
-                .addComponent(btnViewAdd)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnViewAdd)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(117, 117, 117))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
